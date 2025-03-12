@@ -13,9 +13,11 @@
 @keyframes heart-movement {
     0% {
         transform: scale(1);
+        transform-origin: center;
     }
     100% {
         transform: scale(1.25);
+        transform-origin: center;
     }
 }
 
