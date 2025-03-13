@@ -12,7 +12,8 @@
 
 .page {
     min-inline-size: 320px;
-    min-block-size: 100 dvb;
+    min-block-size: 100dvb;
+    background-attachment: fixed;
     display: grid;
     justify-content: center;
     background-image: var(--background-image-gradient);
@@ -55,13 +56,13 @@
 .list {
     display: grid;
     justify-content: center;
-    background-color: var(--alternative-text-color);
     gap: 52px;
 }
 
 .card {
     display: grid;
     justify-content: center;
+    background-color: var(--alternative-text-color);
     border: 2px solid var(--main-text-color);
     width: clamp(23.4375rem, 16.3732rem + 30.1408vw, 43.5rem);
 }
@@ -199,7 +200,7 @@
 .dialog_memory[open] {
     display: grid;
     grid-template-rows: auto auto;
-    justify-items: center;
+    justify-items: start;
     gap: 15px;
     width: 341px;
     height: 195px;
@@ -222,6 +223,7 @@
     gap: 10px;
     width: 257px;
     align-items: center;
+    margin-left: 8px;
 }
 
 .dialog_memory_text {
@@ -248,7 +250,7 @@
 .dialog_memory_button {
     justify-self: center;
     border: 2px solid var(--main-text-color);
-    width: 257px;
+    width: 293px;
     height: 38px;
 }
 
@@ -273,7 +275,15 @@
         margin-top: 50px;
         grid-template-columns: auto auto;
         height: 55px;
-        width: 335px;
+        width: 340px;
+    }
+
+    .floppy_svg {
+        margin-left: 10px;
+    }
+
+    .text-memory-button {
+        margin-right: 10px;
     }
 
     .text-memory-button {
@@ -284,6 +294,11 @@
         height: 21px;
         width: 21px;
     }
+}
+
+.button__text {
+    mix-blend-mode: difference;
+    color: var(--alternative-text-color);
 }
 
 .general_interactive_button:focus-visible {
@@ -322,7 +337,6 @@
 }
 
 .general_interactive_button:hover {
-    color: white;
     transition: color 0.5s ease-in-out;
 }
 
@@ -340,13 +354,13 @@
     transition: fill linear;
 }
 
-.card__icon-button:hover .main-body {
+.like-icon:not(.is-liked):hover .main-body {
     fill: var(--contour-color);
     transition: fill 0.3s 0.3s linear;
     transition-delay: 0.05s;
 }
 
-.card__icon-button:hover .core {
+.like-icon:not(.is-liked):hover .core {
     fill: var(--contour-color);
     transition: fill 0.3s 0.03s linear;
 }
