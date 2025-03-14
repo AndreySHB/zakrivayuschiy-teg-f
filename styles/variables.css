@@ -1,5 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
+    --header-logo-font-size: clamp(3.063rem, 2.71rem + 1.5vw, 4.063rem);
+    --header-logo-close-font-size: clamp(0.875rem, 0.677rem + 0.85vw, 1.438rem);
     --font-style-accent: 'PressStart2P', sans-serif;
     --font-style-normal: 'Inter', sans-serif;
     --main-text-color: #000000;
