@@ -270,10 +270,7 @@
         width: 353px;
     }
 
-    .dialog_floppy_container {
-        width: 293px;
-    }
-
+    .dialog_floppy_container,
     .dialog_memory_button {
         width: 293px;
     }
